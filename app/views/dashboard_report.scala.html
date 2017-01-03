@@ -1,0 +1,151 @@
+@(activities: List[Activity], user: User)
+
+@main("Dashboard") {
+	@dashboard_menu()
+	
+	<input type="hidden" value="@user.id" id='usersID'>@* hidden field to get user id *@
+  <script>
+	
+	// find logged in user id
+  var uid = $('#usersID').attr("value");
+ 
+	// construct api url
+  var url = "http://localhost:9000/api/users/" + uid + "/activities";
+	//var url = "/api/users/" + uid + "/activities";
+	
+	// get activity data using rest api
+	$(document).ready(function () {
+		$.ajax({
+			url:url,
+			dataType: 'json',
+			success: function(data) {
+				
+				// create empty arrays
+				var dateDistance_data = [];
+				var dateDuration_data = [];
+				
+				// convert json array to array of objects, date & distance
+				$.map(data, function(obj, i) {
+					dateDistance_data.push([obj.date, obj.distance, obj.activityType]);
+				});
+				
+				// reverse so that latest data appears to right of chart
+				dateDistance_data = dateDistance_data.reverse();
+				
+				// convert json array to array of objects, date & duration
+				$.map(data, function(obj, i) {
+					dateDuration_data.push([obj.date, obj.duration]);
+				});
+				
+				// reverse so that latest data appears to right of chart
+				dateDuration_data = dateDuration_data.reverse();
+				
+				// create distance chart
+				$('#chartContainer').highcharts({
+					chart: {
+						type: 'column',
+						marginRight: 130,
+						marginBotom: 25
+					},
+					title: {
+						text: 'Activity Distances'
+					},
+					xAxis: {
+						type: 'category'
+					},
+					yAxis: {
+						title: {
+							text: 'Distance Km'
+						},
+						plotLines: [{
+	              value: 0,
+	              width: 1,
+	              color: '#808080'
+	          }]
+					},
+					series: [{
+						name: 'distance',
+						data: dateDistance_data
+					}]
+				});
+				
+				// create  duration chart
+				$('#chartContainer2').highcharts({
+					chart: {
+						type: 'line',
+						marginRight: 130,
+						marginBotom: 25
+					},
+					title: {
+						text: 'Activity Duration'
+					},
+					xAxis: {
+						type: 'category'
+					},
+					yAxis: {
+						title: {
+							text: 'Duration minutes'
+						},
+						plotLines: [{
+	              value: 0,
+	              width: 1,
+	              color: '#808080'
+	          }]
+					},
+					legend: {
+						layout: 'vertical',
+						align: 'right',
+						x: -10,
+						y: 100,
+						borderWidth: 0
+					},
+					series: [{
+						name: 'minutes',
+						data: dateDuration_data
+					}]
+				});
+			}
+		});
+	});
+  </script>
+	
+
+  
+	
+	<div class="row">
+	<br>
+		<div id="chartContainer" style="min-width: 310px; height: 350px; margin: 0 auto"></div><br>
+		<div id="chartContainer2" style="min-width: 310px; height: 350px; margin: 0 auto"></div><br>
+		
+		<div class="text-center">
+			<button id="show" class="button success radius">View All Activities</button>
+	    <button id="hide" class="button radius">Hide Activities</button>
+    </div><br>
+		<div id="viewHide" class="small-7 large-9 columns" hidden="true">
+			<h2>@user.firstname's Activities List</h2>
+			<table>
+				<thead>
+					<tr>
+						<th width="150">Type</th>
+            <th width="150">Location</th>
+            <th width="150">Distance Km</th>
+            <th width="100">Date</th>
+            <th width="150">Duration minutes</th>
+				</thead>
+				<tbody>
+					@for(i <- 0 until activities.size) {
+					<tr>
+						<td> @activities(i).activityType </td> 
+	          <td> @activities(i).location </td> 
+	          <td> @activities(i).distance </td>
+	          <td> @activities(i).date </td>
+	          <td> @activities(i).duration </td>
+					</tr>
+					}
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+	
+}

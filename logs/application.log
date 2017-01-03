@@ -1,0 +1,8 @@
+2016-12-29 01:13:47,538 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-12-29 01:13:47,739 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2016-12-29 01:13:49,474 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-12-29 01:13:50,841 [INFO] from application in application-akka.actor.default-dispatcher-6 - Shutting down connection pool.
+2016-12-29 01:13:51,041 [INFO] from application in application-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
+2016-12-29 01:13:51,047 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:h2:mem:play
+2016-12-29 01:13:51,241 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2016-12-29 01:14:07,168 [INFO] from application in application-akka.actor.default-dispatcher-6 - User = User{Id=null, Firstname=q, Lastname=x, Email=x@test.com, Password=qwerty}

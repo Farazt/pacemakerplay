@@ -1,0 +1,27 @@
+@(form: Form[Accounts.Login])
+
+@main("Login") {
+
+  @welcome_menu()
+  <div class="main">
+		<div class="wrapper">
+			<div id="login" class="row" style="margin: auto">
+				<form action="/authenticate" method="POST">
+					<div class="large-12 columns text-center">
+						<h3 class="text-center">Login to Pacemaker</h3>
+							@if(form.hasGlobalErrors) {
+							    <div data-alert class="alert-box alert radius">
+							        @form.globalError.message
+							        <a href="#" class="close">&times;</a>
+							    </div>
+							}
+				    <input type="text" placeholder="Email" class="no-radius" name="email" />
+				    <input type="password" placeholder="Password" class="no-radius" name="password" />
+				    <button  class="button small border-radius-bottom" style="width: 100%">Login</button>
+					 </div>
+				</form>
+			</div>
+		</div>
+	</div>
+    
+ }

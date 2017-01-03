@@ -1,0 +1,148 @@
+[0m[[0mdebug[0m] [0mjavaOptions: List(-Djna.nosys=true)[0m
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 8 initial tasks for 8 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.UserTest1, sbt.ForkMain$AnnotatedFingerscan@4608afdf, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest1[0m.[36mcreateAndRetrieveUserByEmail[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest1[0m.[36mcreateAndRetrieveUserByEmail[0m finished, took 0.051 sec[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest1[0m.[36mdeleteAllUsersResultsInEmptyUserTable[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest1[0m.[36mdeleteAllUsersResultsInEmptyUserTable[0m finished, took 0.033 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 3.03s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.LocationTest, sbt.ForkMain$AnnotatedFingerscan@4538fee2, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest models.[33mLocationTest[0m.[36mcreateAndRetrieveLocationForActivity[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mLocationTest[0m.[36mcreateAndRetrieveLocationForActivity[0m finished, took 0.254 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.255s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(controllers.PacemakerAPITest, sbt.ForkMain$AnnotatedFingerscan@748f22bc, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mDELETEOnApiUsersRouteShouldExist[0m started[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mDELETEOnApiUsersRouteShouldExist[0m finished, took 0.305 sec[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mPOSTOnApiActivityLocationRouteCreateLocation[0m started[0m
+[0m[[31merror[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[31mPOSTOnApiActivityLocationRouteCreateLocation[0m failed: javax.persistence.[31mPersistenceException[0m: Error inserting bean [class models.Location] with unidirectional relationship. For inserts you must use cascade save on the master bean [class models.Activity]., took 0.357 sec[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dmlbind.BindableUnidirectional.dmlBind(BindableUnidirectional.java:67)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.InsertMeta.bind(InsertMeta.java:154)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:104)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:69)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:50)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeInsertBean(DefaultPersistExecute.java:54)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:615)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:661)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:449)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:399)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:387)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1467)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1460)[0m
+[0m[[31merror[0m] [0m    at com.avaje.ebean.Model.save(Model.java:231)[0m
+[0m[[31merror[0m] [0m    at controllers.PacemakerAPI.createLocation(PacemakerAPI.java:159)[0m
+[0m[[31merror[0m] [0m    at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(Routes.scala:661)[0m
+[0m[[31merror[0m] [0m    at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(Routes.scala:661)[0m
+[0m[[31merror[0m] [0m    at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)[0m
+[0m[[31merror[0m] [0m    at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)[0m
+[0m[[31merror[0m] [0m    at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)[0m
+[0m[[31merror[0m] [0m    at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)[0m
+[0m[[31merror[0m] [0m    at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)[0m
+[0m[[31merror[0m] [0m    at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)[0m
+[0m[[31merror[0m] [0m    at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)[0m
+[0m[[31merror[0m] [0m    at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)[0m
+[0m[[31merror[0m] [0m    at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)[0m
+[0m[[31merror[0m] [0m    at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.impl.Future$.apply(Future.scala:31)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.Future$.apply(Future.scala:492)[0m
+[0m[[31merror[0m] [0m    at play.core.j.JavaAction.apply(JavaAction.scala:108)[0m
+[0m[[31merror[0m] [0m    at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)[0m
+[0m[[31merror[0m] [0m    at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)[0m
+[0m[[31merror[0m] [0m    at play.utils.Threads$.withContextClassLoader(Threads.scala:21)[0m
+[0m[[31merror[0m] [0m    at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)[0m
+[0m[[31merror[0m] [0m    at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)[0m
+[0m[[31merror[0m] [0m    at scala.Option.map(Option.scala:146)[0m
+[0m[[31merror[0m] [0m    at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)[0m
+[0m[[31merror[0m] [0m    at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)[0m
+[0m[[31merror[0m] [0m    at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:409)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)[0m
+[0m[[31merror[0m] [0m    at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mPOSTOnApiActivityLocationRouteCreateLocation[0m finished, took 0.373 sec[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mPOSTOnApiUsersRouteCreatesUser[0m started[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mPOSTOnApiUsersRouteCreatesUser[0m finished, took 0.359 sec[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mPOSTOnApiUsersActivityRouteCreatesActivity[0m started[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mPOSTOnApiUsersActivityRouteCreatesActivity[0m finished, took 0.244 sec[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mGETOnApiUsersRouteShouldExist[0m started[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mGETOnApiUsersRouteShouldExist[0m finished, took 0.186 sec[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mDELETEOnApiUsersIdRouteShouldDeleteUserAndAssociatedActivity[0m started[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mDELETEOnApiUsersIdRouteShouldDeleteUserAndAssociatedActivity[0m finished, took 0.22 sec[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mGETOnDummyRouteShouldNotBeFound[0m started[0m
+[0m[[0mdebug[0m] [0mTest controllers.[33mPacemakerAPITest[0m.[36mGETOnDummyRouteShouldNotBeFound[0m finished, took 0.16 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 7 total, 1.849s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 7 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.UserTest3, sbt.ForkMain$AnnotatedFingerscan@7dc07d36, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest3[0m.[36mcreateAndRetrieveUserByEmail[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest3[0m.[36mcreateAndRetrieveUserByEmail[0m finished, took 0.195 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.195s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.UserTest2, sbt.ForkMain$AnnotatedFingerscan@1296eb36, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest2[0m.[36mcreateAndRetrieveUserByEmail[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mUserTest2[0m.[36mcreateAndRetrieveUserByEmail[0m finished, took 0.161 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.162s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(models.ActivityTest, sbt.ForkMain$AnnotatedFingerscan@19862d23, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mcreateAndRetrieveActivityForUser[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mcreateAndRetrieveActivityForUser[0m finished, took 0.175 sec[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mlistAlltheCreatedActivitiesForUser[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mlistAlltheCreatedActivitiesForUser[0m finished, took 0.153 sec[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mcreateAndUpdateActivity[0m started[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mcreateAndUpdateActivity[0m finished, took 0.145 sec[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mdeleteAllActivities[0m started[0m
+[0m[[31merror[0m] [0mTest models.[33mActivityTest[0m.[31mdeleteAllActivities[0m failed: [0m
+[0m[[31merror[0m] [0mExpected: null[0m
+[0m[[31merror[0m] [0m     but: was <BeanList size[0] list[]>, took 0.148 sec[0m
+[0m[[0mdebug[0m] [0mTest models.[33mActivityTest[0m.[36mdeleteAllActivities[0m finished, took 0.148 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 0.624s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@1cef7f74, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m started[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m finished, took 0.0 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.0s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(parsers.JsonParserTest, sbt.ForkMain$AnnotatedFingerscan@be83169, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
+[0m[[0mdebug[0m] [0mTest parsers.[33mJsonParserTest[0m.[36mactivityConvertsToJsonStringAndBackAgain[0m started[0m
+[0m[[0mdebug[0m] [0mTest parsers.[33mJsonParserTest[0m.[36mactivityConvertsToJsonStringAndBackAgain[0m finished, took 0.227 sec[0m
+[0m[[0mdebug[0m] [0mTest parsers.[33mJsonParserTest[0m.[36mlocationConvertsToJsonStringAndBackAgain[0m started[0m
+[0m[[0mdebug[0m] [0mTest parsers.[33mJsonParserTest[0m.[36mlocationConvertsToJsonStringAndBackAgain[0m finished, took 0.133 sec[0m
+[0m[[0mdebug[0m] [0mTest parsers.[33mJsonParserTest[0m.[36muserConvertsToJsonStringAndBackAgain[0m started[0m
+[0m[[0mdebug[0m] [0mTest parsers.[33mJsonParserTest[0m.[36muserConvertsToJsonStringAndBackAgain[0m finished, took 0.125 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 0.485s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 3 events.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[31merror[0m] [0mFailed: Total 20, Failed 2, Errors 0, Passed 18[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	models.UserTest3[0m
+[0m[[0mdebug[0m] [0m	models.UserTest2[0m
+[0m[[0mdebug[0m] [0m	parsers.JsonParserTest[0m
+[0m[[0mdebug[0m] [0m	ApplicationTest[0m
+[0m[[0mdebug[0m] [0m	models.UserTest1[0m
+[0m[[0mdebug[0m] [0m	models.LocationTest[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	controllers.PacemakerAPITest[0m
+[0m[[31merror[0m] [0m	models.ActivityTest[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

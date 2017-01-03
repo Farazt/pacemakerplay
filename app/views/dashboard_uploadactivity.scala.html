@@ -1,0 +1,51 @@
+@()
+
+@main("Upload activity") {
+	@dashboard_menu()
+   
+ <script type="text/javascript">
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", load files for jQuery UI Date Picker
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+    }
+</script>
+ 
+<script>
+if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+    jQuery(function($){ //on document.ready
+        $('#activityDate').datepicker();
+    })
+}
+</script>
+ 
+	<div class="main">
+		<div class="wrapper">
+			<div id="login" class="row" style="margin: auto">
+				<form action="/submitactivity" method="POST">
+					<div class="large-12 columns text-center">
+						<h3 class="text-center">Enter Activity Details:</h3>
+						<label>Please select an activity</label>
+						<select name="kind" required>
+							<option></option>
+							<option value="walking">Walking</option>
+							<option value="running">Running</option>
+							<option value="cycling">Cycling</option>
+							<option value="hiking">Hiking</option>
+							<option value="swimming">Swimming</option>
+							<option value="rowing">Rowing</option>
+						</select>
+						
+				    <input type="text" placeholder="Activity location:" class="no-radius" name="location" required/>
+				    <input type="number" min="0" placeholder="Distance in km:" class="no-radius" name="distance"  required/>
+				    <input type="date" name="date" id="activityDate" placeholder="Activity date:" required>
+				    <input type="number" min="0" placeholder="Duration minutes:" class="no-radius" step="5" name="duration"  required/>
+				    <button  class="button small border-radius-bottom" style="width: 100%">Upload Activity</button>
+					 </div>
+				</form>
+			</div>
+		</div>
+	</div>
+}

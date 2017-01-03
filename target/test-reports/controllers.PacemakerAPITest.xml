@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="danny-Latitude-E7450" name="controllers.PacemakerAPITest" tests="7" errors="0" failures="1" time="1.831">
+                     <properties>
+      <property name="jline.esc.timeout" value="0"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/><property name="java.vm.version" value="25.111-b14"/><property name="activator.home" value="/home/ftahir/Documents/Masters/Agile/activator-dist-1.3.12"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="path.separator" value=":"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="file.encoding.pkg" value="sun.io"/><property name="user.country" value="IE"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="sun.os.patch.level" value="unknown"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="user.dir" value="/home/ftahir/Documents/Masters/Agile/pacemakerplay"/><property name="java.runtime.version" value="1.8.0_111-b14"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/><property name="os.arch" value="amd64"/><property name="java.io.tmpdir" value="/tmp"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="os.name" value="Linux"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.class.version" value="52.0"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="os.version" value="4.4.0-57-generic"/><property name="user.home" value="/home/ftahir"/><property name="user.timezone" value="Europe/Dublin"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="file.encoding" value="UTF-8"/><property name="java.specification.version" value="1.8"/><property name="java.class.path" value="/home/ftahir/Documents/Masters/Agile/activator-dist-1.3.12/libexec/activator-launch-1.3.12.jar"/><property name="user.name" value="ftahir"/><property name="jline.shutdownhook" value="false"/><property name="java.vm.specification.version" value="1.8"/><property name="sun.java.command" value="/home/ftahir/Documents/Masters/Agile/activator-dist-1.3.12/libexec/activator-launch-1.3.12.jar test"/><property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/><property name="sun.arch.data.model" value="64"/><property name="user.language" value="en"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.vm.info" value="mixed mode"/><property name="java.version" value="1.8.0_111"/><property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/><property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/><property name="java.vendor" value="Oracle Corporation"/><property name="file.separator" value="/"/><property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.cpu.endian" value="little"/><property name="sun.desktop" value="gnome"/><property name="sun.cpu.isalist" value=""/>
+    </properties>
+                     <testcase classname="controllers.PacemakerAPITest" name="DELETEOnApiUsersRouteShouldExist" time="0.305">
+                                                 
+                                               </testcase><testcase classname="controllers.PacemakerAPITest" name="POSTOnApiActivityLocationRouteCreateLocation" time="0.357">
+                                                 <failure message="javax.persistence.PersistenceException: Error inserting bean [class models.Location] with unidirectional relationship. For inserts you must use cascade save on the master bean [class models.Activity]." type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: javax.persistence.PersistenceException: Error inserting bean [class models.Location] with unidirectional relationship. For inserts you must use cascade save on the master bean [class models.Activity].
+	at com.avaje.ebeaninternal.server.persist.dmlbind.BindableUnidirectional.dmlBind(BindableUnidirectional.java:67)
+	at com.avaje.ebeaninternal.server.persist.dml.InsertMeta.bind(InsertMeta.java:154)
+	at com.avaje.ebeaninternal.server.persist.dml.InsertHandler.bind(InsertHandler.java:104)
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:69)
+	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.insert(DmlBeanPersister.java:50)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeInsertBean(DefaultPersistExecute.java:54)
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:615)
+	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:661)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:449)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.insert(DefaultPersister.java:399)
+	at com.avaje.ebeaninternal.server.persist.DefaultPersister.save(DefaultPersister.java:387)
+	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1467)
+	at com.avaje.ebeaninternal.server.core.DefaultServer.save(DefaultServer.java:1460)
+	at com.avaje.ebean.Model.save(Model.java:231)
+	at controllers.PacemakerAPI.createLocation(PacemakerAPI.java:159)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(Routes.scala:661)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(Routes.scala:661)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:492)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:409)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+</failure>
+                                               </testcase><testcase classname="controllers.PacemakerAPITest" name="POSTOnApiUsersRouteCreatesUser" time="0.359">
+                                                 
+                                               </testcase><testcase classname="controllers.PacemakerAPITest" name="POSTOnApiUsersActivityRouteCreatesActivity" time="0.244">
+                                                 
+                                               </testcase><testcase classname="controllers.PacemakerAPITest" name="GETOnApiUsersRouteShouldExist" time="0.186">
+                                                 
+                                               </testcase><testcase classname="controllers.PacemakerAPITest" name="DELETEOnApiUsersIdRouteShouldDeleteUserAndAssociatedActivity" time="0.22">
+                                                 
+                                               </testcase><testcase classname="controllers.PacemakerAPITest" name="GETOnDummyRouteShouldNotBeFound" time="0.16">
+                                                 
+                                               </testcase>
+                     <system-out></system-out>
+                     <system-err></system-err>
+                   </testsuite>

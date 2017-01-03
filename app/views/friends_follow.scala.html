@@ -1,0 +1,58 @@
+@(users: List[User], user: User)
+
+@main("follow") {
+	@dashboard_menu()
+    
+ <script class="init">
+	$(document).ready(function() {
+	$('#users').dataTable();
+	} );
+	</script>
+ 
+  <div class="row">
+  	@if(flash.contains("success")) {
+				    <div data-alert class="alert-box success radius">
+				        @flash.get("success")
+				        <a href="#" class="close">&times;</a>
+				    </div>
+		}	
+		
+			<div class="small-12 large-12 columns">
+			<h2>@user.firstname @user.lastname's Can Follow</h2>
+			<table id="userActivities" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th width="150">Name</th>
+            			<th width="150">Email</th>
+            		
+            		</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th width="150">Users</th>
+            			<th width="150">Email</th>
+            		</tr>
+				</foot>
+				<tbody>
+					@for(i <- 0 until users.size) {
+					<tr>
+					<td> @users(i).firstname </td> 
+					<td> @users(i).email </td> 
+	        		</tr>
+					}
+				</tbody>
+			</table>
+		
+		
+		<form >
+					<div class="large-12 columns text-center">
+						<h3 class="text-center">Enter the Email Id to follow</h3>
+					<input type="text" placeholder="Email" class="border-radius-top" name="email" required/>
+				   
+				    <button  class="button small border-radius-bottom" style="width: 100%">Follow</button>
+					 </div>
+				</form>
+		</div><br>
+		
+	</div>
+	}

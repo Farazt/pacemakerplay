@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/logback.xml,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/routes,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/application.conf,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/initial-data.yml,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/initial-data.yml)[0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/evolutions,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/evolutions/default,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/home/ftahir/Documents/Masters/Agile/pacemakerplay/conf/evolutions/default/1.sql,/home/ftahir/Documents/Masters/Agile/pacemakerplay/target/scala-2.11/classes/evolutions/default/1.sql)[0m

@@ -1,0 +1,58 @@
+@(activities: List[Activity], user: User)
+
+@main("Dashboard") {
+	@dashboard_menu()
+    
+ <script class="init">
+	$(document).ready(function() {
+	$('#userActivities').dataTable();
+	} );
+	</script>
+ 
+  <div class="row">
+  	@if(flash.contains("success")) {
+				    <div data-alert class="alert-box success radius">
+				        @flash.get("success")
+				        <a href="#" class="close">&times;</a>
+				    </div>
+		}
+		
+		<div class="small-12 large-12 columns">
+			<h2>@user.firstname @user.lastname's Activities</h2>
+			<table id="userActivities" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th width="150">Type</th>
+            <th width="150">Location</th>
+            <th width="150">Distance Km</th>
+            <th width="100">Date</th>
+            <th width="100">Dutation minutes</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th width="150">Type</th>
+            <th width="150">Location</th>
+            <th width="150">Distance Km</th>
+            <th width="100">Date</th>
+            <th width="100">Dutation minutes</th>
+					</tr>
+				</foot>
+				<tbody>
+					@for(i <- 0 until activities.size) {
+					<tr>
+				<td> @activities(i).activityType </td> 
+	          	<td> @activities(i).location </td> 
+	          	<td> @activities(i).distance </td>
+	          	<td> @activities(i).date  </td>
+	          	<td> @activities(i).duration  </td>
+					</tr>
+					}
+				</tbody>
+			</table>
+		</div><br>
+		
+	
+		
+	</div>
+}
